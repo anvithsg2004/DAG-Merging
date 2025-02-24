@@ -1,6 +1,7 @@
 import itertools
 import networkx as nx
 
+
 def build_in_degree_map(G):
     """
     Builds a map of in-degrees for the nodes in the graph.
@@ -50,6 +51,7 @@ def in_degree_similarity_check(graphs):
             print(f"No Discrepancy for Node {node}: {in_degree_sets}")
 
     return discrepancies
+
 
 def create_nx_dg(dependency_list):
     G = nx.DiGraph()

@@ -1,11 +1,13 @@
 import networkx as nx
 
+
 def is_dag_transitive_reduction(G):
     closure = nx.transitive_closure(G)
     for node in closure.nodes():
         if node in closure.neighbors(node):
             return False
     return True
+
 
 def is_dag_floyd_warshall(G):
     """

@@ -10,7 +10,6 @@ def Create_nx_DG(dependency_list):
     return G
 
 
-
 # DFS with Recursion Stack
 def is_dag_dfs_rec_stack(G):
     visited = set()
@@ -32,7 +31,6 @@ def is_dag_dfs_rec_stack(G):
         if dfs(node):
             return False
     return True
-
 
 
 # Matrix Approach (Floyd-Warshall)
@@ -59,9 +57,6 @@ def is_dag_floyd_warshall(G):
     return True
 
 
-
-
-
 # Main code to test all algorithms
 if __name__ == "__main__":
     dependency_list1 = {
@@ -86,14 +81,13 @@ if __name__ == "__main__":
     }
     L = [dependency_list1, dependency_list2, dependency_list3]
     for i in L:
-
         G = Create_nx_DG(i)
 
         print("Kahn’s Algorithm:", is_dag_kahn(G))
-        #print("DFS-based Topological Sort:", is_dag_dfs_topological(G))
+        # print("DFS-based Topological Sort:", is_dag_dfs_topological(G))
         print("DFS with Recursion Stack:", is_dag_dfs_rec_stack(G))
-        #print("Union-Find (Adapted):", is_dag_union_find(G))
-        #print("In-Degree Counting:", is_dag_in_degree(G))
+        # print("Union-Find (Adapted):", is_dag_union_find(G))
+        # print("In-Degree Counting:", is_dag_in_degree(G))
         print("Matrix Approach (Floyd-Warshall):", is_dag_floyd_warshall(G))
         print("Tarjan’s SCC Algorithm:", is_dag_tarjan(G))
         print()

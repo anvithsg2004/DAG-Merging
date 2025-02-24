@@ -14,12 +14,12 @@ def create_nx_dg(dependency_list):
             G.add_edge(dependent, node)
     return G
 
+
 def build_in_degree_map(G):
     in_degree_map = {}
     for node in G.nodes:
         in_degree_map[node] = set(G.predecessors(node))
     return in_degree_map
-
 
 
 # In-Degree Similarity Check
@@ -36,7 +36,6 @@ def in_degree_similarity_check(graphs):
         if not all(x == in_degree_sets[0] for x in in_degree_sets):
             discrepancies[node] = "In-degree similarity discrepancy found"
     return discrepancies
-
 
 
 # Adjacency Matrix Comparison
@@ -71,7 +70,6 @@ def hash_in_degree_set(in_degree_set):
     return hashlib.md5(in_degree_str.encode()).hexdigest()
 
 
-
 # Signature Hashing
 def signature_hashing_comparison(graphs):
     discrepancies = {}
@@ -89,6 +87,7 @@ def signature_hashing_comparison(graphs):
                      if len(hashes) > 1}
     return discrepancies
 
+
 if __name__ == "__main__":
     # Define multiple dependency lists with different structures
     dependency_list1 = {'A': [], 'B': ['A'], 'C': ['B'], 'D': ['C']}
@@ -96,7 +95,6 @@ if __name__ == "__main__":
     # Create directed graphs from dependency lists
     G1 = create_nx_dg(dependency_list1)
     G2 = create_nx_dg(dependency_list2)
-
 
     # List of all graphs for testing
     graphs = [G1, G2]

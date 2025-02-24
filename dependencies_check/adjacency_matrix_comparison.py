@@ -3,6 +3,7 @@ import numpy as np
 import copy
 import itertools
 
+
 def adjacency_matrix_comparison(graphs):
     """
     Compares adjacency matrices of multiple graphs to detect discrepancies.
@@ -52,6 +53,7 @@ def adjacency_matrix_comparison(graphs):
             print(f"No Discrepancy for Node {node}: {columns}")
 
     return discrepancies
+
 
 def create_nx_dg(dependency_list):
     G = nx.DiGraph()

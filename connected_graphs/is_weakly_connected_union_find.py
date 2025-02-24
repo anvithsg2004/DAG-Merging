@@ -1,5 +1,6 @@
 import networkx as nx
 
+
 def is_weakly_connected_union_find(G):
     """
     Checks if the directed graph G is weakly connected using Union-Find (Disjoint Set Union).

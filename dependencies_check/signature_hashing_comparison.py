@@ -77,4 +77,3 @@ G2.add_edges_from([("A", "B"), ("C", "B")])
 
 discrepancies = signature_hashing_comparison([G1, G2])
 print("\nDiscrepancies:", discrepancies)
-

@@ -1,5 +1,6 @@
 import networkx as nx
 
+
 def is_weakly_connected_floyd_warshall(G):
     """
     Checks if the directed graph G is weakly connected by running Floyd-Warshall on its undirected version.

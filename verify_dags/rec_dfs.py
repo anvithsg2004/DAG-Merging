@@ -1,5 +1,6 @@
 import networkx as nx
 
+
 def is_dag_dfs_rec_stack(G):
     """
     Checks if the directed graph G is a Directed Acyclic Graph (DAG) using DFS and recursion stack.

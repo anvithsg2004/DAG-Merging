@@ -101,8 +101,8 @@ if __name__ == "__main__":
     # Define multiple dependency lists
     dependency_list1 = {'A': [], 'B': ['A'], 'C': ['B'], 'D': ['C']}
     dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B'], 'X': ['B'], 'Y': ['C'], 'Z': ['Y']}
-    #dependency_list1 = {'A': ['C'], 'B': ['A'], 'C': ['B']}
-    #dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
+    # dependency_list1 = {'A': ['C'], 'B': ['A'], 'C': ['B']}
+    # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
     # Combine into a list of dependency dictionaries
     dependency_lists = [dependency_list1, dependency_list2]
 

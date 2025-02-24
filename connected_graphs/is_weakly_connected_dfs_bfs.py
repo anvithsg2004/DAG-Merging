@@ -1,5 +1,6 @@
 import networkx as nx
 
+
 def is_weakly_connected_dfs_bfs(G):
     """
     Checks if the directed graph G is weakly connected by converting it to an undirected graph

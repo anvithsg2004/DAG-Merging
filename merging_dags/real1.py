@@ -25,7 +25,8 @@ def merge_dags_consistency_check(*dependency_lists):
             if node not in node_dependencies:
                 node_dependencies[node] = dependents_set
             else:
-                print(f"Node '{node}' already exists. Current dependencies: {node_dependencies[node]}, New dependencies: {dependents_set}")
+                print(
+                    f"Node '{node}' already exists. Current dependencies: {node_dependencies[node]}, New dependencies: {dependents_set}")
                 node_dependencies[node] = node_dependencies[node].union(dependents_set)  # Merge dependencies
             print(f"After processing node '{node}': {node_dependencies}")
         iteration += 1
