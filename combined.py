@@ -103,6 +103,67 @@ if __name__ == "__main__":
     dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B'], 'X': ['B'], 'Y': ['C'], 'Z': ['Y']}
     # dependency_list1 = {'A': ['C'], 'B': ['A'], 'C': ['B']}
     # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
+
+    # Completely separate graphs
+    # dependency_list1 = {'X': [], 'Y': ['X'], 'Z': ['Y']}
+    # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
+
+    # Pair 2: Overlapping nodes with different dependencies
+    # dependency_list1 = {'A': ['B'], 'B': ['C'], 'C': []}
+    # dependency_list2 = {'A': ['C'], 'B': ['A'], 'C': []}
+
+    # Pair 3: One graph is a subset of the other
+    # dependency_list1 = {'A': [], 'B': ['A'], 'C': ['B']}
+    # dependency_list2 = {'A': [], 'B': ['A']}
+
+    # Pair 4: Merging would create a cycle
+    # dependency_list1 = {'A': ['B'], 'B': []}
+    # dependency_list2 = {'B': ['A'], 'A': []}
+
+    # Pair 5: Conflicting dependencies for a node
+    # dependency_list1 = {'A': ['B'], 'B': []}
+    # dependency_list2 = {'A': ['C'], 'C': []}
+
+    # Pair 6: Nodes with no dependencies
+    # dependency_list1 = {'A': [], 'B': [], 'C': []}
+    # dependency_list2 = {'X': [], 'Y': [], 'Z': []}
+
+    # Pair 7: Multiple root nodes
+    # dependency_list1 = {'A': [], 'B': [], 'C': ['A', 'B']}
+    # dependency_list2 = {'X': [], 'Y': ['X'], 'Z': ['X']}
+
+    # Pair 8: Complex dependencies
+    # dependency_list1 = {'A': ['B', 'C'], 'B': ['D'], 'C': ['D'], 'D': []}
+    # dependency_list2 = {'X': ['Y', 'Z'], 'Y': ['W'], 'Z': ['W'], 'W': []}
+
+    # Pair 9: One graph has a cycle (should fail DAG check)
+    # dependency_list1 = {'A': ['B'], 'B': ['C'], 'C': ['A']}
+    # dependency_list2 = {'X': ['Y'], 'Y': ['Z'], 'Z': []}
+
+    # Pair 10: Shared nodes with different dependency directions
+    # dependency_list1 = {'A': ['B'], 'B': ['C'], 'C': []}
+    # dependency_list2 = {'A': ['C'], 'B': ['A'], 'C': []}
+
+    # Pair 11: Nodes with multiple parents
+    # dependency_list1 = {'A': ['B', 'C'], 'B': [], 'C': []}
+    # dependency_list2 = {'B': ['D'], 'C': ['D'], 'D': []}
+
+    # Pair 12: Large number of nodes
+    # dependency_list1 = {f'A{i}': [f'A{i + 1}'] for i in range(10)}
+    # dependency_list2 = {f'B{i}': [f'B{i + 1}'] for i in range(10)}
+
+    # Pair 13: Nodes with no dependencies in one graph but do in another
+    # dependency_list1 = {'A': [], 'B': [], 'C': []}
+    # dependency_list2 = {'A': ['B'], 'B': ['C'], 'C': []}
+
+    # Pair 14: Nodes with different numbers of dependencies
+    # dependency_list1 = {'A': ['B', 'C', 'D'], 'B': [], 'C': [], 'D': []}
+    # dependency_list2 = {'A': ['B'], 'B': ['C'], 'C': ['D'], 'D': []}
+
+    # Pair 15: Complex web that might create a cycle when merged
+    # dependency_list1 = {'A': ['B'], 'B': ['C'], 'C': ['D'], 'D': []}
+    # dependency_list2 = {'D': ['A'], 'B': ['E'], 'E': []}
+
     # Combine into a list of dependency dictionaries
     dependency_lists = [dependency_list1, dependency_list2]
 
