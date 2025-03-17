@@ -98,13 +98,24 @@ def plot_graph_pyvis(G, file_name):
 
 # Main Function
 if __name__ == "__main__":
-    # Define multiple dependency lists
+
+    # Passes all the tests.
     dependency_list1 = {'A': [], 'B': ['A'], 'C': ['B'], 'D': ['C']}
     dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B'], 'X': ['B'], 'Y': ['C'], 'Z': ['Y']}
+
+    # Has Cycle in one of the graphs.
     # dependency_list1 = {'A': ['C'], 'B': ['A'], 'C': ['B']}
     # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
 
-    # Completely separate graphs
+    # This has inconsistency.
+    # dependency_list1 = {'A': [], 'B': ['A'], 'C': ['B']}
+    # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['X'], 'X': []}
+
+    # Not weakly connected
+    # dependency_list1 = {'A': ['B'], 'B': ['C'], 'C': ['F'], 'F': ['D'], 'D': ['E'], 'E': ['A']}
+    # dependency_list2 = {'A': ['B'], 'B': [], 'C': ['D'], 'D': []}
+
+    # Pair 1: Completely separate graphs
     # dependency_list1 = {'X': [], 'Y': ['X'], 'Z': ['Y']}
     # dependency_list2 = {'A': [], 'B': ['A'], 'C': ['B']}
 

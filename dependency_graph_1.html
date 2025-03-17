@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "A", "label": "A", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "B", "label": "B", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "C", "label": "C", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "D", "label": "D", "shape": "dot", "size": 10}]);
-                  edges = new vis.DataSet([{"arrows": "to", "from": "A", "to": "B", "width": 1}, {"arrows": "to", "from": "B", "to": "C", "width": 1}, {"arrows": "to", "from": "C", "to": "D", "width": 1}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "A", "label": "A", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "E", "label": "E", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "B", "label": "B", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "C", "label": "C", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "F", "label": "F", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "D", "label": "D", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "A", "to": "E", "width": 1}, {"arrows": "to", "from": "B", "to": "A", "width": 1}, {"arrows": "to", "from": "C", "to": "B", "width": 1}, {"arrows": "to", "from": "F", "to": "C", "width": 1}, {"arrows": "to", "from": "D", "to": "F", "width": 1}, {"arrows": "to", "from": "E", "to": "D", "width": 1}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
